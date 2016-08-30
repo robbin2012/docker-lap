@@ -40,10 +40,14 @@ ENV LOG_LEVEL warn
 ENV ALLOW_OVERRIDE All
 ENV DATE_TIMEZONE UTC
 
+ENV APACHE_USER apache
+ENV APACHE_GROUP apache
+
+
 COPY index.php /var/www/html/
 COPY run-lap.sh /usr/sbin/
 RUN chmod +x /usr/sbin/run-lap.sh
-RUN chown -R apache:apache /var/www/html
+RUN chown -R ${APACHE_USER}:${APACHE_GROUP} /var/www/html
 
 VOLUME /var/www/html
 VOLUME /var/log/httpd
