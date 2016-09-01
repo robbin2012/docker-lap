@@ -1,4 +1,4 @@
-#run
+#!/bin/bash
 
 # Run Apache:
 if [ $LOG_LEVEL == 'debug' ]; then
