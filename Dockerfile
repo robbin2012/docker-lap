@@ -65,7 +65,7 @@ COPY run.sh /usr/sbin/
 COPY ffmpeg /bin/
 
 RUN chmod +x /usr/sbin/run-lap.sh
-RUN /usr/sbin/run-lap.sh 
+RUN /usr/sbin/run-lap.sh
 
 RUN chown -R ${APACHE_USER}:${APACHE_GROUP} /var/www/html
 
@@ -74,4 +74,5 @@ VOLUME /var/log/httpd
 
 EXPOSE 80
 
+RUN chmod +x /usr/sbin/run.sh
 CMD ["/usr/sbin/run.sh"]
