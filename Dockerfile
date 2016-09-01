@@ -60,6 +60,7 @@ ENV DATE_TIMEZONE UTC
 
 COPY index.php /var/www/html/
 COPY run-lap.sh /usr/sbin/
+COPY run.sh /usr/sbin/
 
 COPY ffmpeg /bin/
 
