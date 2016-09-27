@@ -31,26 +31,24 @@ RUN yum install -y vim mariadb
 
 # Install php
 RUN yum install -y \
-	php \
-	php-common \
-	php-dba \
-	php-gd \
-	php-intl \
-	php-ldap \
-	php-mbstring \
-	php-mysqlnd \
-	php-odbc \
-	php-pdo \
-	php-pecl-memcache \
-	php-pecl-zendopcache \
-	php-pgsql \
-	php-pspell \
-	php-recode \
-	php-snmp \
-	php-soap \
-        php-mcrypt \
-	php-xml \
-	php-xmlrpc
+	php55w \
+	php55w-common \
+	php55w-cli \
+	php55w-gd \
+	php55w-intl \
+	php55w-ldap \
+	php55w-mbstring \
+	php55w-mysqlnd \
+	php55w-pdo \
+	php55w-soap \
+	php55w-mcrypt \
+	php55w-ldap \
+	php55w-xml \
+	php55w-xmlrpc \
+	php55w-opcache \
+	php55w-pecl-memcache \
+	php55w-pecl-igbinary
+
 
 ENV LOG_STDOUT **Boolean**
 ENV LOG_STDERR **Boolean**
